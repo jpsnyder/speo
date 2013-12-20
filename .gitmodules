@@ -1,3 +1,6 @@
 [submodule "libraries/db"]
 	path = libraries/db
 	url = https://github.com/entomb/OBJ-MySQL.git
+[submodule "libraries/bootstrap"]
+	path = libraries/bootstrap
+	url = https://github.com/twbs/bootstrap.git
