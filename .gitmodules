@@ -1,0 +1,3 @@
+[submodule "libraries/db"]
+	path = libraries/db
+	url = https://github.com/entomb/OBJ-MySQL.git
