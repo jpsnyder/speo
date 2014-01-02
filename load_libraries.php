@@ -18,7 +18,7 @@ function db_connect(){
   //SET UP DB
   $db_config = array();
   $db_config["hostname"] = "localhost";
-  $db_config["database"] = "testDB";
+  $db_config["database"] = "speodb";
   $db_config["username"] = "root";
   $db_config["password"] = "jps1734";
   //class instantiation

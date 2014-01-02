@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `testdb`
+-- Database: `speodb`
 --
-CREATE DATABASE IF NOT EXISTS `testdb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `testdb`;
+CREATE DATABASE IF NOT EXISTS `speodb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `speodb`;
 
 -- --------------------------------------------------------
 
@@ -47,13 +47,6 @@ CREATE TABLE IF NOT EXISTS `customer_input` (
   `delivery_time_frame_earliest` time DEFAULT NULL,
   `delivery_time_frame_latest` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `customer_input`
---
-
-INSERT INTO `customer_input` (`group_name`, `billing_address`, `billing_state`, `billing_city`, `contact`, `email`, `date_time_event`, `phone_number`, `cell_number`, `day_of_contact`, `day_of_phone_number`, `event_address`, `event_state`, `event_city`, `payment`, `delivery_time_frame_earliest`, `delivery_time_frame_latest`) VALUES
-('testrtfsafsdsdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

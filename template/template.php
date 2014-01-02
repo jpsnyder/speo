@@ -5,7 +5,7 @@ class SPEO_Template{
 	public $head = '<!DOCTYPE html>
 		<html>
 		  <head>
-			<title>Bootstrap 101 Template</title>
+			<title>SPEO Form</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<!-- Bootstrap -->
 			<link href="libraries/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
