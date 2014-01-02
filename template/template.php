@@ -23,13 +23,22 @@ class SPEO_Template{
 			<!-- jQuery (necessary for Bootstrap\'s JavaScript plugins) -->
 			<script src="https://code.jquery.com/jquery.js"></script>
 			<!-- Include all compiled plugins (below), or include individual files as needed -->
-			<script src="js/bootstrap.min.js"></script>
+			<script src="libraries/bootstrap/dist/js/bootstrap.min.js"></script>
+			
+			<script type="text/javascript">
+				$(\'#date_time_event\').datetimepicker();
+			</script>
 		</body>
 	</html>';
 
 	public $content;
 	public function setContent($content){
 		$this->content = $content;
+	}
+	
+	
+	public function setScripts($script){
+		$this->script = $script;
 	}
 	
 	public function render(){
