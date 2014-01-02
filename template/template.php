@@ -32,7 +32,15 @@ class SPEO_Template{
 			<script type="text/javascript">
 				$(function () {
 					$(\'#date_time_event\').datetimepicker();
+					$(\'#delivery_time_frame_earliest\').datetimepicker({
+						pickDate: false
+					});
+					$(\'#delivery_time_frame_latest\').datetimepicker({
+						pickDate: false
+					});
+
 				});
+				
 			</script>
 		</body>
 	</html>';

@@ -70,6 +70,7 @@ $customer_form = '
 			<span class="glyphicon glyphicon-calendar"></span>
 		</span>
 	</div>
+	<span class="help-block">Select the clock icon in the popup for time.</span>  
   </div>
 </div>
 
@@ -92,11 +93,20 @@ $customer_form = '
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-5 control-label" for="delivery_time_frame_earliest">Delivery Time Frame</label>  
-	<div class="col-md-1">
-		<input id="delivery_time_frame_earliest" name="delivery_time_frame_earliest" placeholder="Earliest" class="form-control input-md" required="" type="text">
+	<div class="col-md-2">
+		<div class="input-group date" id="delivery_time_frame_earliest">
+			<input id="delivery_time_frame_earliest" name="delivery_time_frame_earliest" placeholder="Earliest" class="form-control input-md" required="" type="text" />
+			<span class="input-group-addon"><span class="glyphicon glyphicon-clock"></span></span>
+		</div>
 	</div>
-	<div class="col-md-1">
-		<input id="delivery_time_frame_latest" name="delivery_time_frame_latest" placeholder="Latest" class="form-control input-md" required="" type="text">
+</div>
+<div class="form-group">
+	<label class="col-md-5 control-label" for="delivery_time_frame_latest"></label>  
+	<div class="col-md-2">
+		<div class="input-group date" id="delivery_time_frame_latest">
+			<input id="delivery_time_frame_latest" name="delivery_time_frame_latest" placeholder="Latest" class="form-control input-md" required="" type="text">
+			<span class="input-group-addon"><span class="glyphicon glyphicon-clock"></span></span>
+		</div>
 	</div>
 </div>
 
@@ -144,11 +154,26 @@ $customer_form = '
 </div> <!-- end container -->
 ';
 
+$success = '
+<div class="alert alert-success">
+	<strong>Thank You!</strong> We will be in contact with you soon.
+</div>
+';
+
+$failure = '
+<div class="alert alert-danger">
+	<strong>Oh Snap!</strong> Something went wrong, please hit the back arrow and try again.
+</div>
+';
+
 if(isset($_POST['submit'])){
 	$db = db_connect();
 	unset($_POST['submit']);
+	$_POST['date_time_event'] = date('Y-m-d H:i:s', strtotime($_POST['date_time_event']));
+	$_POST['delivery_time_frame_earliest'] = date('H:i:s', strtotime($_POST['delivery_time_frame_earliest']));
+	$_POST['delivery_time_frame_latest'] = date('H:i:s', strtotime($_POST['delivery_time_frame_latest']));	
 	$db->insert('customer_input',$_POST);
-	$template->setContent($_POST['group_name']);
+	$template->setContent($success);
 } else {
 $template->setContent($customer_form);
 }
