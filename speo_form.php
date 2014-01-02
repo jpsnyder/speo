@@ -65,12 +65,11 @@ $customer_form = '
   <label class="col-md-5 control-label" for="date_time_event">Date And Time of Event</label>  
   <div class="col-md-3">
 	<div id="date_time_event" class="input-group date">
-		<input data-format="MM/dd/yyyy HH:mm PP" type="text"></input>
+		<input id="date_time_event" name="date_time_event" type="text" class="form-control input-md" data-format="MM/DD/YYYY hh:mm A" />
 		<span class="input-group-addon">
 			<span class="glyphicon glyphicon-calendar"></span>
 		</span>
 	</div>
-	<!-- <input id="date_time_event" name="date_time_event" placeholder="" class="form-control input-md" required="" type="text"> -->
   </div>
 </div>
 
@@ -132,14 +131,6 @@ $customer_form = '
   </div>
 </div>
 
-    <div id="datetimepicker" class="input-append date">
-      <input type="text"></input>
-      <span class="add-on">
-        <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-      </span>
-    </div>
-</div> <!-- end container -->
-
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-5 control-label" for="submit"></label>
@@ -150,6 +141,7 @@ $customer_form = '
 
 </fieldset>
 </form>
+</div> <!-- end container -->
 ';
 
 if(isset($_POST['submit'])){

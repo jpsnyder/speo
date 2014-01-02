@@ -9,6 +9,8 @@ class SPEO_Template{
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<!-- Bootstrap -->
 			<link href="libraries/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+			<link rel="stylesheet" href="libraries/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+
 
 			<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 			<!-- WARNING: Respond.js doesn\'t work if you view the page via file:// -->
@@ -24,9 +26,13 @@ class SPEO_Template{
 			<script src="https://code.jquery.com/jquery.js"></script>
 			<!-- Include all compiled plugins (below), or include individual files as needed -->
 			<script src="libraries/bootstrap/dist/js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="libraries/moment/moment.js"></script>
+			<script type="text/javascript" src="libraries/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 			
 			<script type="text/javascript">
-				$(\'#date_time_event\').datetimepicker();
+				$(function () {
+					$(\'#date_time_event\').datetimepicker();
+				});
 			</script>
 		</body>
 	</html>';
